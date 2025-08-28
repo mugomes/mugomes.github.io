@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenvolvimento de Sistemas em PHP, Laravel e WordPress | Murilo Gomes</title>
+  <meta name="description" content="Desenvolvimento de sites institucionais responsivos e profissionais." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MG</div>
+        <div>
+          <h1>Murilo Gomes</h1>
+          <div class="muted" style="font-size:0.8rem">Desenvolvedor de Sistemas</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+          <span class="hamburger"><span class="bar"></span></span>
+        </button>
+        <ul id="navList">
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <span class="kicker">Desenvolvedor de Sistemas</span>
+        <h2>Desenvolvimento de Sistemas modernos e profissionais</h2>
+        <p class="lead">Linguagem de Programação PHP (Puro/Laravel/WordPress)</p>
+        <div style="display:flex;gap:0.75rem;align-items:center">
+          <a class="cta" href="#contato">Solicite um orçamento</a>
+          <a class="muted" href="#portfolio">Ver portfólio →</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="profile-card">
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <div class="avatar">MG</div>
+            <div>
+              <div style="font-weight:700">Murilo Gomes</div>
+              <div class="muted" style="font-size:0.85rem">+55 (19) 9 98609-3333 • contato@mugomes.com.br</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="portfolio">
+      <h3>Portfólio - Sistemas</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="info">
+            <h3>MiPhant</h3>
+            <p>Software para navegar em sistemas desenvolvidos em PHP no desktop.</p>
+            <a href="https://github.com/mugomes/miphant">saiba mais</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="info">
+            <h3>Criador de Certificados SSL</h3>
+            <p>Crie certificados SSL para servidor Apache para testes de scripts em ambiente local no Debian/Ubuntu.</p>
+            <a href="https://github.com/mugomes/missl">saiba mais</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="info">
+            <h3>Compilador de PHP</h3>
+            <p>Compila o PHP a partir do código fonte e armazena dentro de um AppImage, dessa forma é possível executar
+              o PHP sem precisar ter dependências instaladas no computador.</p>
+            <a href="https://github.com/mugomes/micompile">saiba mais</a>
+          </div>
+        </article>
+      </div>
+      <h3>Portfólio - Sites</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><img src="./images/portfolio-arquitetura.webp" style="width: 100%;" /></div>
+          <div class="info">
+            <h3>Template Arquitetura</h3>
+            <p>WordPress e Elementor</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="./images/portfolio-bymunalu.webp" style="width: 100%;" /></div>
+          <div class="info">
+            <h3>ByMunalú</h3>
+            <p>Site institucional</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="./images/portfolio-bluice.webp" style="width: 100%;" /></div>
+          <div class="info">
+            <h3>BluIce</h3>
+            <p>Blog de Informática.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <h3>Serviços</h3>
+      <div class="grid">
+        <div class="card" style="padding:1rem">
+          <h3>Desenvolvimento de Sites</h3>
+          <p>Criação de Templates em WordPress com Elementor.</p>
+        </div>
+        <div class="card" style="padding:1rem">
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p>Linguagem de Programação PHP (Puro/Laravel).</p>
+        </div>
+        <div class="card" style="padding:1rem">
+          <h3>Desenvolvimento de Plugins</h3>
+          <p>Linguagem de Programação PHP (WordPress).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h3>Sobre</h3>
+      <div class="cols">
+        <div class="box" style="flex:1">
+          <p>Sou desenvolvedor de sistema com experiência em linguagem programação PHP (Puro/Laravel/WordPress).</p>
+        </div>
+        <div class="box" style="width:320px">
+          <h4>Habilidades</h4>
+          <div class="skills">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span
+              class="chip">Bootstrap</span><span class="chip">PHP</span><span class="chip">Laravel</span><span
+              class="chip">WordPress</span>
+            <span class="chip">Node</span><span class="chip">Electron</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h3>Contato</h3>
+      <div class="cols">
+        <p>Atendimento de segunça a sexta das 09:00 às 18:00:</p>
+        <p><a href="https://wa.me/5519986093333?text=Solicitar%20Orçamento" target="_blank"
+            rel="noopener nofollow">WhatsApp</a> |
+          <a href="mailto:mugomesoficial@gmail.com" target="_blank" rel="noopener nofollow">E-mail</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">Copyright © <span id="year"></span> Murilo Gomes. Todos os direitos reservados.</div>
+    </footer>
+  </main>
+
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>
