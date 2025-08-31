@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvimento de Sistemas em PHP e WordPress | Murilo Gomes</title>
-  <meta name="description" content="Desenvolvimento de sites institucionais responsivos e profissionais." />
+  <title>Desenvolvimento de Sistemas em PHP, Manutenção de Sites e Hospedagem | Mu Gomes</title>
+  <meta name="description" content="Desenvolvimento de sistemas para sites, manutenção de sites e hospedagem." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -26,10 +26,10 @@
           <span class="hamburger"><span class="bar"></span></span>
         </button>
         <ul id="navList">
-          <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="https://www.mugomes.com.br">Blog</a></li>
+          <li><a href="#lives">Lives</a></li>
+          <li><a href="#videos">Vídeos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
@@ -41,7 +41,7 @@
       <div class="hero-left">
         <span class="kicker">Desenvolvedor de Sistemas</span>
         <h2>Desenvolvimento de Sistemas modernos e profissionais</h2>
-        <p class="lead">Linguagem de Programação PHP (Puro/WordPress)</p>
+        <p class="lead">Linguagem de Programação PHP</p>
         <div style="display:flex;gap:0.75rem;align-items:center">
           <a class="cta" href="#contato">Solicite um orçamento</a>
           <a class="muted" href="#portfolio">Ver portfólio →</a>
@@ -61,8 +61,62 @@
       </aside>
     </section>
 
+    <section id="servicos">
+      <h3>Serviços</h3>
+      <div class="grid">
+        <div class="card" style="padding:1rem">
+          <h3>Desenvolvimento de Sites</h3>
+          <p>Criação de Templates em WordPress com Elementor.</p>
+        </div>
+        <div class="card" style="padding:1rem">
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p>Linguagem de Programação PHP.</p>
+        </div>
+        <div class="card" style="padding:1rem">
+          <h3>Manutenção de Sites</h3>
+          <p>Atualizações, Suporte e Backups.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lives">
+      <div class="cols">
+        <div class="box" style="flex:1">
+          <span class="kicker">Twitch</span>
+          <h2>Assista ao vivo</h2>
+          <p class="lead">Desenvolvimento em PHP (Procedural/OOP).</p>
+          <div style="display:flex;gap:0.75rem;align-items:center">
+            <a class="cta" href="https://twitch.tv/profmu">Acesse</a>
+            <a class="muted" href="https://www.mugomes.com.br/apoie">Apoie o Canal →</a>
+          </div>
+        </div>
+        <div class="box" style="width:320px">
+          <h4>Lives de</h4>
+          <div class="skills">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span
+              class="chip">Bootstrap</span><span class="chip">PHP</span><span class="chip">WordPress</span>
+            <span class="chip">Node</span><span class="chip">Electron</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h3>Vídeos</h3>
+      <div class="grid">
+        <div class="gallery" id="gallery"></div>
+        <!-- Modal -->
+        <div class="modal" id="videoModal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <iframe id="videoFrame" src="" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio">
-      <h3>Portfólio - Sistemas</h3>
+      <h3>Portfólio</h3>
       <div class="grid">
         <article class="card">
           <div class="info">
@@ -87,66 +141,6 @@
           </div>
         </article>
       </div>
-      <h3>Portfólio - Sites</h3>
-      <div class="grid">
-        <article class="card">
-          <div class="thumb"><img src="./images/portfolio-arquitetura.webp" style="width: 100%;" /></div>
-          <div class="info">
-            <h3>Template Arquitetura</h3>
-            <p>WordPress e Elementor</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="thumb"><img src="./images/portfolio-bymunalu.webp" style="width: 100%;" /></div>
-          <div class="info">
-            <h3>ByMunalú</h3>
-            <p>Site institucional</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="thumb"><img src="./images/portfolio-bluice.webp" style="width: 100%;" /></div>
-          <div class="info">
-            <h3>BluIce</h3>
-            <p>Blog de Informática.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="servicos">
-      <h3>Serviços</h3>
-      <div class="grid">
-        <div class="card" style="padding:1rem">
-          <h3>Desenvolvimento de Sites</h3>
-          <p>Criação de Templates em WordPress com Elementor.</p>
-        </div>
-        <div class="card" style="padding:1rem">
-          <h3>Desenvolvimento de Sistemas</h3>
-          <p>Linguagem de Programação PHP (Puro).</p>
-        </div>
-        <div class="card" style="padding:1rem">
-          <h3>Desenvolvimento de Plugins</h3>
-          <p>Linguagem de Programação PHP (WordPress).</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre">
-      <h3>Sobre</h3>
-      <div class="cols">
-        <div class="box" style="flex:1">
-          <p>Sou desenvolvedor de sistema com experiência em linguagem programação PHP (Puro/WordPress).</p>
-        </div>
-        <div class="box" style="width:320px">
-          <h4>Habilidades</h4>
-          <div class="skills">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span
-              class="chip">Bootstrap</span><span class="chip">PHP</span><span
-              class="chip">WordPress</span>
-            <span class="chip">Node</span><span class="chip">Electron</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="contato">
@@ -155,13 +149,13 @@
         <p>Atendimento de segunça a sexta das 09:00 às 18:00:</p>
         <p><a href="https://wa.me/5519986093333?text=Solicitar%20Orçamento" target="_blank"
             rel="noopener nofollow">WhatsApp</a> |
-          <a href="mailto:mugomesoficial@gmail.com" target="_blank" rel="noopener nofollow">E-mail</a>
+          <a href="mailto:contato@mugomes.com.br" target="_blank" rel="noopener nofollow">E-mail</a>
         </p>
       </div>
     </section>
 
     <footer>
-      <div class="muted">Copyright © <span id="year"></span> Murilo Gomes. Todos os direitos reservados.</div>
+      <div class="muted">Copyright © 2004-<span id="year"></span> Mu Gomes. Todos os direitos reservados.</div>
     </footer>
   </main>
 
