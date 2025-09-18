@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Softwares Livres | Mu Gomes</title>
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/prism/prism.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-xxl">
+            <a class="navbar-brand" href="/">Mu Gomes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Projetos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Softwares</a></li>
+                            <li><a class="dropdown-item" href="#">Bibliotecas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitch.tv/profmu" class="nav-link">Lives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.youtube.com/@mugomesoficial" class="nav-link">Vídeos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/apoie.html" class="nav-link">Apoie</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container-xxl mt-3 fs-5">
+            <h1 class="display-6">MiPhant</h1>
+            <p>O MiPhant é desenvolvido para rodar os scripts PHP através de um navegador de Internet com janelas
+                personalizadas, ele executa o servidor PHP embutido com portas aleatórias. Dessa forma, você pode
+                executar vários aplicativos ao mesmo tempo sem que eles interfiram uns nos outros.</p>
+            <div class="separator" style="clear: both; text-align: center;"><img
+                    src="../images/softwares/miphant.webp"
+                    alt="MipHant" width="152" height="152" border="0" data-original-height="128" data-original-width="128">
+            </div>
+            <p>Além disso, o MiPhant também faz download automático do PHP compilado de forma estática (não depende de
+                bibliotecas externas), graças ao excelente projeto <a
+                    href="https://github.com/crazywhalecc/static-php-cli" target="_blank"
+                    rel="nofollow noopener noreferrer">static-php-cli</a>.</p>
+            <p>Se precisar de uma extensão específica, você pode compilar o PHP para Linux e Windows com as extensões
+                necessárias.</p>
+            <p><strong>Idiomas</strong><br>No MiPhant você pode desenvolver aplicativos em vários idiomas, você só
+                precisa criar um arquivo de idioma no formato json na pasta langs e adicionar as traduções. Ao executar
+                o aplicativo em um computador com um idioma diferente, o MiPhant detectará o idioma e obterá a tradução
+                por meio do arquivo de tradução.</p>
+            <p><strong>Funções do MiPhant</strong></p>
+            <ul>
+                <li>Baixa automaticamente a versão do PHP de acordo com as configurações realizadas</li>
+                <li>Função para obter versão do MiPhant e recursos internos</li>
+                <li>Suporte para trabalhar com rotas em PHP</li>
+                <li>Suporte com banco de dados SQLite, MySQL e MariaDB</li>
+                <li>Suporte para criação de Menu e Submenu</li>
+                <li>Função para caixas de diálogo para mensagem e confirmação</li>
+                <li>Função para caixas de diálogo para abrir e salvar arquivo e selecionar diretório</li>
+                <li>Função para nova janela dentro do aplicativo</li>
+                <li>Função para abrir URL em um navegador externo</li>
+                <li>Função para exibir notificação</li>
+                <li>Função para adicionar Ícone na bandeja do sistema</li>
+                <li>Função para Exportar para PDF</li>
+                <li>Função para Tradução em JS</li>
+                <li>DevTools</li>
+                <li>Função para fechar todo o aplicativo de uma vez</li>
+                <li>Environments: ARGV, Nome de usuário, HomeDir, Plataforma e Idioma</li>
+            </ul>
+            <p><span style="font-size: 14pt;"><strong>Download</strong></span></p>
+            <p><a class="btn btn-primary"
+                    href="https://github.com/mugomes/miphant/releases/download/v1.0.0/MiPhant-linux-x64-1.0.0.zip"
+                    target="_blank" rel="nofollow noopener noreferrer">Debian/Ubuntu</a> <a class="btn btn-primary"
+                    href="https://github.com/mugomes/miphant/releases/download/v1.0.0/MiPhant-win32-x64-1.0.0.zip"
+                    target="_blank" rel="nofollow noopener noreferrer">Windows</a> <a class="btn btn-primary"
+                    href="#documentacao">Documentação</a> <a class="btn btn-primary" href="/apoie.html">Apoie</a></p>
+            <p><span style="font-size: medium;"><strong>Idiomas: </strong>Inglês (Padrão) e Português</span></p>
+            <p><span style="font-size: 10pt;"><strong><a id="hash"></a>SHA256</strong><br>Debian/Ubuntu:
+                    a2bd7b7190bbc5febab30b07f122462600ccf012869c2626b92caba3c922994a<br>Windows:
+                    fe9bc490aee013f1ddb6f57e676c3972abada87af9c1d6d4a8916389bf540fca</span></p>
+            <p><span style="font-size: 14pt;"><strong>Informações do Software</strong></span></p>
+            <ul>
+                <li><span style="font-size: medium;">Versão: 1.0.0</span></li>
+                <li><span style="font-size: medium;">Licença: MIT</span></li>
+            </ul>
+            <p><span style="font-size: 14pt;"><strong>Requisitos do Sistema:</strong></span></p>
+            <ul>
+                <li><span style="font-size: medium;">Sistema Operacional de 64 bits:</span>
+                    <ul>
+                        <li><span style="font-size: medium;">Linux Debian 12 ou superior</span></li>
+                        <li><span style="font-size: medium;">Linux Ubuntu 22.04 ou superior</span></li>
+                        <li><span style="font-size: medium;">Windows 10 ou superior</span></li>
+                    </ul>
+                </li>
+                <li><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank"
+                        rel="nofollow noopener noreferrer">Visual C++ Redistributable</a> 14.42 (Windows)</li>
+            </ul>
+            <p><span style="font-size: 14pt;"><strong>Perguntas Frequentes</strong></span></p>
+            <p><strong><span style="font-size: medium;">Para que serve o MiPhant?</span></strong></p>
+            <p><span style="font-size: medium;">O MiPhant é um software portátil desenvolvido para navegar em sistemas
+                    PHP, dessa forma você pode desenvolver desde projetos pessoais até empresariais.</span></p>
+            <p><strong><span style="font-size: medium;">Posso desenvolver software proprietário e
+                        livres?</span></strong></p>
+            <p><span style="font-size: medium;">Você pode desenvolver softwares proprietários e livres</span></p>
+            <p><strong><span style="font-size: medium;">Posso ofuscar o código do meu software?</span></strong></p>
+            <p><span style="font-size: medium;">Sim. Softwares proprietários podem ter seu código ofuscado, para isso
+                    você pode trabalhar com ofuscadores, recomendamos o <a href="https://github.com/pk-fr/yakpro-po"
+                        target="_blank" rel="nofollow noopener noreferrer">yakpro</a> para ofuscação do PHP e <a
+                        href="https://github.com/javascript-obfuscator/javascript-obfuscator" target="_blank"
+                        rel="nofollow noopener noreferrer">JavaScript Obfuscator</a> para ofuscação de códigos
+                    JavaScript. Você também pode utilizar softwares pagos para isso ou usar técnicas mais simples como
+                    usar o base64, mas lembre-se, quanto mais simples a técnica de ofuscação for, mais fácil será
+                    desofuscá-lo.</span></p>
+            <p><strong><span style="font-size: medium;">Posso vender licenças para meu software?</span></strong></p>
+            <p><span style="font-size: medium;">Se o seu software for proprietário você pode vender sua licença como
+                    desejar, sob licenças, limitação de uso de computadores e usuários, licença vitalícia, entre outras
+                    formas.</span></p>
+            <p><strong><span style="font-size: medium;">Posso desativar o PHP e vincular o endereço do meu
+                        site?</span></strong></p>
+            <p><span style="font-size: medium;">Não. No momento desativei esse recurso para evitar uso externos, você
+                    pode vincular usando o PHP, mas não recomendo isso, por questão de segurança.</span></p>
+            <p><strong><span style="font-size: medium;">Posso usar bibliotecas sob a licença GPL no meu
+                        software?</span></strong></p>
+            <p><span style="font-size: medium;">O MiPhant é um software compatível com a licença GPL, desde que você não
+                    distribua o executável do PHP junto com seu projeto. Use a versão original do software que baixa o
+                    PHP no computador do usuário, dessa forma evitando incompatibilidade com a licença.</span></p>
+            <p><strong><span style="font-size: medium;">Quero um recurso mais avançado para gerar PDF em PHP, qual
+                        utilizar?</span></strong></p>
+            <p><span style="font-size: medium;">Recomendamos a biblioteca DomPDF que está sob a licença LGPL, uma
+                    licença menor e compatível com softwares proprietários. Para softwares GPL você pode usar o DomPDF
+                    ou MPDF.</span></p>
+            <p><strong><span style="font-size: medium;">Como distribuir meu software?</span></strong></p>
+            <p><span style="font-size: medium;">Para distribuir seu software você pode criar um zip, AppImage, criar um
+                    instalador exe, entre outras formas. Defina a pasta de PHP com permissão de escrita e leitura para
+                    que seja possível baixar uma versão automaticamente. Coloque sempre uma licença no seu software,
+                    caso não saiba criar uma licença para seu software proprietário ou utilizar uma existente para
+                    software livre r</span><span style="font-size: medium;">ecomendamos sempre consultar um
+                    advogado.</span></p>
+            <p><strong><span style="font-size: medium;">Posso usar em um ambiente local?</span></strong></p>
+            <p><span style="font-size: medium;">Sim. O software é desenvolvido para funcionar com o servidor embutido do
+                    PHP em um ambiente local utilizando o IP 127.0.0.1, as portas são geradas automaticamente e de forma
+                    aleatória. Por esse motivo, nenhum computador externo terá acesso ao servidor, exceto se você
+                    configurar para que o IP local seja ouvido pela rede, o que não recomendamos, pois o IP local deve
+                    ser utilizado apenas para uso do usuário local, sem acesso a rede.</span></p>
+            <p><span style="font-size: medium;"><strong>Posso usar em um computador público?</strong></span></p>
+            <p><span style="font-size: medium;">Evite utilizar o MiPhant em computadores públicos, pois ele utiliza o
+                    servidor embutido do PHP, exceto se realizar algum tratamento e aplicar técnicas de segurança, ao
+                    utilizá-lo, restrinja-se a servidores locais e configure o firewall para limitar o acesso apenas a
+                    endereços confiáveis.</span></p>
+            <p><strong><span style="font-size: medium;">Porque o software é compactado em asar?</span></strong></p>
+            <p><span style="font-size: medium;">Para evitar alterações acidentais nos arquivos principais do
+                    software.</span></p>
+            <p><strong><span style="font-size: medium;">Outras Informações</span></strong></p>
+            <p>O <span style="font-size: medium;">MiPhant</span> é fornecido "COMO ESTÁ", sem garantia de qualquer tipo,
+                expressa ou implícita. O Desenvolvedor não oferece garantias quanto à precisão, confiabilidade,
+                desempenho, precisão ou adequação do Software para um determinado fim.</p>
+            <p><span style="font-size: 14pt;"><strong><a id="documentacao"></a>Documentação</strong></span></p>
+            <p>O <span style="font-size: medium;">MiPhant</span> possui códigos de exemplo que acompanham o software, ao
+                extrair você pode executar o <span style="font-size: medium;">MiPhant</span> e testar o software para
+                ver como ele funciona. O código fonte dos arquivos em PHP ajudam você a entender como trabalhar e
+                integrar seu aplicativo ao <span style="font-size: medium;">MiPhant</span>.</p>
+            <p><strong>Primeiros Passos</strong></p>
+            <p>Os aplicativos integrados com o <span style="font-size: medium;">MiPhant</span> precisam ser criados na
+                pasta app e também precisam ter o arquivo config.json e o arquivo en.json.</p>
+            <p>Estrutura</p>
+            <ul>
+                <li>app/config/config.json</li>
+                <li>app/langs/en.json</li>
+            </ul>
+            <p><strong>Configuração</strong></p>
+            <p>No arquivo de configuração é necessário ter:</p>
+            <pre class="language-javascript"><code>{
+	"app": {
+		"id": "meuapp",
+		"name": "MeuApp",
+		"width": 800,
+		"height": 600,
+		"resizable": true,
+		"frame": true,
+		"icon": "meuapp.png",
+		"disableAccelerationHardware": true,
+		"author": {
+			"name": "Nome do Desenvolvedor",
+			"email": "E-mail do Desenvolvedor",
+			"contact": "https://localhost/contato.html",
+			"url": "https://localhost"
+		},
+		"homepage": "https://localhost",
+		"license": "MIT",
+		"copyright": "Copyright (C) 2025 Nome do Desenvolvedor"
+	},
+	"server": {
+		"perm": true,
+		"linux": {
+			"type": "common",
+			"version": "8.4.8"
+		},
+		"win32": {
+			"type": "spc-max",
+			"version": "8.4.8"
+		},
+		"router": false
+	},
+	"dev": {
+		"menu": true,
+		"tools": false
+	}
+}</code></pre>
+            <p><strong>Nome do Aplicativo</strong></p>
+            <p>O nome do aplicativo tanto para Linux quanto para Windows foi alterado para maiúsculo, ou seja, de
+                miphant para MiPhant, dessa forma você pode identificar o executável com mais facilidade.</p>
+            <p>Para distribuir seu aplicativo recomendamos que renomeie para o nome do seu aplicativo, exemplo de
+                MiPhant para MeuApp ou MeuApp.exe.</p>
+            <p><strong>Ícone da Janela</strong></p>
+            <p>O ícone do aplicativo deve ser adicionado dentro da pasta app/icon/ com o nome que você definiu no
+                arquivo config.json.</p>
+            <p>Caso não seja encontrado um ícone nessa pasta, será utilizado o ícone padrão do MiPhant.</p>
+            <p><strong>Ícone do Aplicativo</strong></p>
+            <p>O MiPhant para Windows possui um ícone próprio e exclusivo para identificar o executável com mais
+                facilidade.</p>
+            <p><strong>Tradução</strong></p>
+            <p>Para que o software funcione corretamente é necessário criar o arquivo en.json, o idioma inglês é
+                definido como padrão no MiPhant. Mesmo que seu software não tenha tradução, é necessário que o arquivo
+                en.json seja criado, você pode deixá-lo sem itens, mas lembre-se de abrir e fechar as chaves {} para que
+                o arquivo json fique no formato correto.</p>
+            <pre class="language-javascript"><code>{}</code></pre>
+            <p>Para criar as traduções você precisa definir seu aplicativo no idioma inglês e depois criar os outros
+                idiomas, por exemplo, en.json, pt.json, es.json.</p>
+            <p><strong>Exemplo en.json</strong></p>
+            <pre class="language-javascript"><code>{
+"File":"File",
+"Edit":"Edit",
+"Help":"Help"
+}</code></pre>
+            <p><strong>Exemplo pt.json</strong></p>
+            <pre class="language-php"><code>{
+"File":"Arquivo",
+"Edit":"Editar",
+"Help":"Ajuda"
+}</code></pre>
+            <p><strong>Estrutura da Pasta</strong></p>
+            <ul>
+                <li>app/langs/en.json</li>
+                <li>app/langs/pt.json</li>
+            </ul>
+            <p>Veja um <a href="https://github.com/mugomes/miphant/blob/main/app/translate.php" target="_blank"
+                    rel="nofollow noopener noreferrer">exemplo</a> de como trabalhar com tradução em JS e PHP.</p>
+            <p><strong>Menu</strong></p>
+            <p>O software também pode ter menus principais, veja um <a
+                    href="https://github.com/mugomes/miphant/blob/main/app/config/menu.json" target="_blank"
+                    rel="nofollow noopener noreferrer">exemplo de menu</a>.</p>
+            <p>Você pode criar o arquivo menu.json para criar um menu para sua janela principal, assim que o aplicativo
+                for iniciado, um menu será carregado na janela.</p>
+            <p>Caso você queira ter um menu para as outras janelas, é só criar a mesma estrutura de pastas na pasta
+                config e criar os menus extras.</p>
+            <p>Estrutura da Pasta</p>
+            <ul>
+                <li>Janela Principal
+                    <ul>
+                        <li>app/index.php</li>
+                        <li>app/config/menu.json</li>
+                    </ul>
+                </li>
+                <li>Janela de Exemplo sem Pasta
+                    <ul>
+                        <li>app/exemplo.php</li>
+                        <li>app/config/exemplo.json</li>
+                    </ul>
+                </li>
+                <li>Janela de Exemplo com pasta
+                    <ul>
+                        <li>app/clientes/list.php</li>
+                        <li>app/config/clientes/list.json</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Veja o <a href="https://github.com/mugomes/miphant/blob/main/app/config/extramenu.json" target="_blank"
+                    rel="nofollow noopener noreferrer">exemplo de menu extra</a>.</p>
+            <p><strong>Environment</strong></p>
+            <p>Através das variáveis de ambiente você pode fazer com que o script PHP obtenha algumas informações que
+                são criadas no MiPhant.</p>
+            <ul>
+                <li>MIPHANT_LANG: Obtém o idioma principal do sistema (pt, en, es)</li>
+                <li>MIPHANT_ARGV: Obtém os argumentos</li>
+                <li>MIPHANT_USERNAME: Obtém o nome de usuário</li>
+                <li>MIPHANT_HOMEDIR: Obtém a pasta home do usuário (/home/nomedousuario/ ou C:\Users\nomedousuario)</li>
+                <li>MIPHANT_PLATFORM: Obtém a plataforma do sistema (linux ou win32)</li>
+            </ul>
+            <p>Veja o arquivo de exemplo de como trabalhar com <a
+                    href="https://github.com/mugomes/miphant/blob/main/app/env.php" target="_blank"
+                    rel="nofollow noopener noreferrer">environment</a> e <a
+                    href="https://github.com/mugomes/miphant/blob/main/app/args.php" target="_blank"
+                    rel="nofollow noopener noreferrer">argumentos</a>.</p>
+            <p><strong>Outros Recursos</strong></p>
+            <p>O MiPhant permite abrir e salvar arquivos, selecionar diretórios, trabalhar com caixa de mensagens e
+                confirmação, notificação, bandeja, gerar arquivo PDF e muito mais. Todos os exemplos estão junto com o
+                software.</p>
+        </div>
+    </section>
+    <footer class="py-3 my-4 mt-5">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="/sobre.html" class="nav-link px-2 text-body-secondary">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a href="/licenciamento-de-software.html" class="nav-link px-2 text-body-secondary">Licenciamento de
+                    Software</a>
+            </li>
+            <li class="nav-item">
+                <a href="/termos-de-uso.html" class="nav-link px-2 text-body-secondary">Termos de Uso</a>
+            </li>
+            <li class="nav-item">
+                <a href="/politica-de-privacidade.html" class="nav-link px-2 text-body-secondary">Política de
+                    Privacidade</a>
+            </li>
+        </ul>
+        <p class="text-center text-body-secondary">Copyright © 2004-2025 Mu Gomes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/prism/prism.min.js"></script>
+</body>
+
+</html>
