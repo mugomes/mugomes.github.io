@@ -186,13 +186,6 @@ export default {
           category: "Utilitários",
           description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
           link: "https://github.com/mugomes/miautostart"
-        },
-        {
-          id: 19,
-          name: "MiAutoStart",
-          category: "Utilitários",
-          description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
-          link: "https://github.com/mugomes/miautostart"
         }
       ],
     };
