@@ -52,7 +52,7 @@ export default {
     return {
       searchQuery: "",
       selectedCategory: "Todos",
-      categories: ["Todos", "Desenvolvimento", "Utilitários", "Bibliotecas"],
+      categories: ["Todos", "Empresarial", "Desenvolvimento", "Utilitários", "Bibliotecas"],
       softwares: [
         {
           id: 1,
@@ -124,6 +124,76 @@ export default {
           description: "Trabalhe com rotas de uma forma rápida e fácil.",
           link: "https://github.com/mugomes/miphantroute"
         },
+        {
+          id: 11,
+          name: "MiNJSInstall",
+          category: "Desenvolvimento",
+          description: "Instala e Desinstala o NVM e Node com mais facilidade no Linux Debian/Ubuntu.",
+          link: "https://github.com/mugomes/minjsinstall"
+        },
+        {
+          id: 12,
+          name: "MiGitTool",
+          category: "Desenvolvimento",
+          description: "Software para importar repositório do GitHub, ideal para quem usa chave GPG ou SSH.",
+          link: "https://github.com/mugomes/migittool"
+        },
+        {
+          id: 13,
+          name: "MiRecibo",
+          category: "Empresarial",
+          description: "Gerencie recibos para pagamentos com valor por extenso e calculo automático.",
+          link: "https://github.com/mugomes/mirecibo"
+        },
+        {
+          id: 14,
+          name: "MiSSL",
+          category: "Desenvolvimento",
+          description: "Crie certificados SSL para servidor Apache para testes de scripts em ambiente local no Debian/Ubuntu.",
+          link: "https://github.com/mugomes/missl"
+        },
+        {
+          id: 15,
+          name: "MiNota",
+          category: "Utilitários",
+          description: "Editor de Texto em formato HTML.",
+          link: "https://github.com/mugomes/minota"
+        },
+        {
+          id: 16,
+          name: "MiProtocolo",
+          category: "Empresarial",
+          description: "Crie protocolos para envio e recebimento de documentos. Gere relatórios para impressão e PDF.",
+          link: "https://github.com/mugomes/miprotocolo"
+        },
+        {
+          id: 17,
+          name: "MiTranslate",
+          category: "Utilitários",
+          description: "Software para tradução de textos.",
+          link: "https://github.com/mugomes/mitranslate"
+        },
+        {
+          id: 18,
+          name: "MiKeyGenerator",
+          category: "Desenvolvimento",
+          description: "Software para gerar chave de ativação com hash.",
+          link: "https://github.com/mugomes/mikeygenerator"
+        },
+        {
+          id: 19,
+          name: "MiAutoStart",
+          category: "Utilitários",
+          description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
+          link: "https://github.com/mugomes/miautostart"
+        },
+        {
+          id: 19,
+          name: "MiAutoStart",
+          category: "Utilitários",
+          description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
+          link: "https://github.com/mugomes/miautostart"
+        }
       ],
     };
   },
