@@ -14,7 +14,7 @@
             <a class="nav-link" href="/#skills">Habilidades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/catalogo/">Projetos</a>
+            <a class="nav-link" href="/catalogo.html">Projetos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/#contact">Contato</a>

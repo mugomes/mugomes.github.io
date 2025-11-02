@@ -8,7 +8,7 @@
 
       <div class="categories">
         <h4>Categorias</h4>
-        <div class="btn-group mb-4">
+        <div class="btn-group flex-wrap mb-4">
           <button class="btn btn-secondary" v-for="category in categories" :key="category"
             @click="filterByCategory(category)">
             {{ category }}
