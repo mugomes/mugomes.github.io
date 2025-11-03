@@ -167,7 +167,7 @@ export default {
 }
 
 .agradecimento-2 {
-    font-size: 12px;
+    font-size: 14px;
     color: #999999;
 }
 </style>
