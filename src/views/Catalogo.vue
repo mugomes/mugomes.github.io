@@ -6,6 +6,10 @@
       <input v-model="searchQuery" type="text" class="form-control mb-4"
         placeholder="Pesquise por nome do software..." />
 
+      <div class="mt-3 mb-4">
+        <a href="/apoie.html" class="btn btn-success">Apoie os Projetos</a>
+      </div>
+
       <div class="categories">
         <h4>Categorias</h4>
         <div class="btn-group flex-wrap mb-4">
