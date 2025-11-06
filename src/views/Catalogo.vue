@@ -190,6 +190,13 @@ export default {
           category: "Utilitários",
           description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
           link: "https://github.com/mugomes/miautostart"
+        },
+        {
+          id: 20,
+          name: "MiPhantDBLite",
+          category: "Bibliotecas",
+          description: "MiPhantDBLite facilita a criação de tabelas e permite consultar, adicionar, alterar e excluir registros da tabela no SQLite3.",
+          link: "https://github.com/mugomes/miphantdblite"
         }
       ],
     };
