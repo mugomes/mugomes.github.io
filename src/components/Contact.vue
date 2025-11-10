@@ -29,11 +29,6 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://instagram.com/mugomesoficial" target="_blank" class="btn btn-success btn-lg">
-                <i class="bi bi-instagram"></i> Instagram
-              </a>
-            </li>
-            <li class="list-inline-item">
               <a href="https://github.com/mugomes" target="_blank" class="btn btn-dark btn-lg">
                 <i class="bi bi-github"></i> GitHub
               </a>

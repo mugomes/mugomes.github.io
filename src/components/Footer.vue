@@ -5,7 +5,6 @@
       <li>
         <a href="https://twitch.tv/profmu" target="_blank" rel="noopener" class="text-white">Twitch</a> |
         <a href="https://youtube.com/@mugomesoficial" target="_blank" rel="noopener" class="text-white">YouTube</a> |
-        <a href="https://instagram.com/mugomesoficial" target="_blank" rel="noopener" class="text-white">Instagram</a> |
         <a href="https://github.com/mugomes" target="_blank" rel="noopener" class="text-white">GitHub</a> |
         <a href="https://linkedin.com/in/mugomes" target="_blank" rel="noopener" class="text-white">LinkedIn</a>
       </li>
