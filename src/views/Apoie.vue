@@ -67,7 +67,7 @@ import Footer from '../components/Footer.vue';
 import { ref, computed } from "vue";
 
 export default {
-    name: "Catalogo",
+    name: "Apoie",
     components: {
         Header,
         Footer
