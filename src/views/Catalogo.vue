@@ -211,6 +211,20 @@ export default {
           category: "Bibliotecas",
           description: "MGColumnView é um componente customizado para Fyne que exibe dados em formato de tabela, com suporte a cabeçalhos clicáveis, seleção por checkboxes, adição e remoção dinâmica de linhas e ordenação por coluna.",
           link: "https://github.com/mugomes/mgcolumnview"
+        },
+        {
+          id: 23,
+          name: "MGDialogBox",
+          category: "Bibliotecas",
+          description: "MGDialogBox é um componente sofisticado para Fyne que possui diversos tipos de caixa de dialogo diferentes.",
+          link: "https://github.com/mugomes/mgdialogbox"
+        },
+        {
+          id: 24,
+          name: "MGNumericEntry",
+          category: "Bibliotecas",
+          description: "MGNumericEntry é um componente numérico para Fyne.",
+          link: "https://github.com/mugomes/mgnumericentry"
         }
       ],
     };
