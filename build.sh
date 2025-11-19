@@ -2,3 +2,5 @@
 
 cp dist/index.html dist/catalogo.html
 cp dist/index.html dist/apoie.html
+
+echo "www.mugomes.com.br" > dist/CNAME
