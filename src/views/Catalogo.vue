@@ -3,7 +3,7 @@
   <section id="catalog" class="catalog py-5">
     <div class="container">
 
-      <h2 class="text-center mb-4">Catálogo</h2>
+      <h2 class="text-center mb-4">Loja Virtual</h2>
 
       <!-- Busca -->
       <input

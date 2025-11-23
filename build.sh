@@ -5,6 +5,10 @@ cp dist/index.html dist/servicos.html
 cp dist/index.html dist/projetos.html
 cp dist/index.html dist/apoie.html
 
+escape_for_sed() {
+    printf '%s' "$1" | sed 's/[&/\|]/\\&/g'
+}
+
 replace_title() {
     FILE="$1"
     TITLE="$2"
@@ -12,7 +16,9 @@ replace_title() {
     if [ -f "$FILE" ]; then
         echo "Atualizando: $FILE → $TITLE"
 
-        sed -i "s@<title>[^<]*</title>@<title>$TITLE</title>@" "$FILE"
+        TITLE_ESCAPED=$(escape_for_sed "$TITLE")
+
+        sed -i "s@<title>[^<]*</title>@<title>$TITLE_ESCAPED</title>@" "$FILE"
     else
         echo "Arquivo não encontrado: $FILE"
     fi
