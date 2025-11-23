@@ -39,10 +39,10 @@ export default {
         },
         {
           title: 'Mais Projetos',
-          description: 'Veja todos os projetos que já desenvolvi em PHP para web e desktop no catálogo.',
-          page: '/catalogo.html',
+          description: 'Veja todos os projetos no Catálogo de Projetos.',
+          page: '/projetos.html',
           target: '_self',
-          btn: 'Ver Catálogo'
+          btn: 'Ver Projetos'
         }
       ]
     }

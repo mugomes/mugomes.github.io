@@ -1,42 +1,81 @@
 <template>
-  <div class="app">
-    <Header />
-    <div class="container mt-5">
-      <h2>Catálogo de Softwares</h2>
-      <input v-model="searchQuery" type="text" class="form-control mb-4"
-        placeholder="Pesquise por nome do software..." />
+  <Header />
+  <section id="catalog" class="catalog py-5">
+    <div class="container">
 
-      <div class="mt-3 mb-4">
-        <a href="/apoie.html" class="btn btn-success">Apoie os Projetos</a>
-      </div>
+      <h2 class="text-center mb-4">Catálogo</h2>
 
-      <div class="categories">
+      <!-- Busca -->
+      <input
+        v-model="searchQuery"
+        type="text"
+        class="form-control mb-4"
+        placeholder="Pesquise por nome ou descrição"
+      />
+
+      <!-- Categorias -->
+      <div class="categories mb-4">
         <h4>Categorias</h4>
-        <div class="btn-group flex-wrap mb-4">
-          <button class="btn btn-secondary" v-for="category in categories" :key="category"
-            @click="filterByCategory(category)">
-            {{ category }}
+        <div class="btn-group flex-wrap">
+          <button
+            class="btn btn-secondary"
+            v-for="cat in categories"
+            :key="cat"
+            @click="selectedCategory = cat"
+          >
+            {{ cat }}
           </button>
         </div>
       </div>
 
-      <div v-if="filteredSoftwares.length === 0" class="alert alert-warning">
-        Nenhum software ou biblioteca encontrado(a).
-      </div>
-
+      <!-- Lista -->
       <div class="row">
-        <div class="col-md-4 mb-4" v-for="software in filteredSoftwares" :key="software.id">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{ software.name }}</h5>
-              <p class="card-text">{{ software.description }}</p>
-              <a :href="software.link" class="btn btn-primary" target="_blank">Ver mais</a>
+        <div class="col-md-4 mb-4" v-for="item in paginatedItems" :key="item.id">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+
+              <span class="badge bg-primary mb-2">{{ item.category }}</span>
+
+              <h5 class="mt-auto">R$ {{ item.price.toFixed(2) }}</h5>
+
+              <a :href="item.link" class="btn btn-success mt-3" target="_blank">
+                Comprar
+              </a>
+
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Paginação -->
+      <nav v-if="totalPages > 1" class="mt-4">
+        <ul class="pagination justify-content-center">
+
+          <li class="page-item" :class="{ disabled: currentPage === 1 }">
+            <button class="page-link" @click="previousPage">Anterior</button>
+          </li>
+
+          <li
+            class="page-item"
+            v-for="page in totalPages"
+            :key="page"
+            :class="{ active: currentPage === page }"
+          >
+            <button class="page-link" @click="changePage(page)">{{ page }}</button>
+          </li>
+
+          <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+            <button class="page-link" @click="nextPage">Próxima</button>
+          </li>
+
+        </ul>
+      </nav>
+
     </div>
-  </div>
+  </section>
   <Footer />
 </template>
 
@@ -47,217 +86,82 @@ import Footer from '../components/Footer.vue';
 import { ref, computed } from "vue";
 
 export default {
-  name: "Catalogo",
+  name: "Catalog",
   components: {
-    Header,
-    Footer
+        Header,
+        Footer
   },
   data() {
     return {
       searchQuery: "",
       selectedCategory: "Todos",
-      categories: ["Todos", "Empresarial", "Desenvolvimento", "Utilitários", "Bibliotecas"],
-      softwares: [
-        {
-          id: 1,
-          name: "MiPhant",
-          category: "Desenvolvimento",
-          description: "Desenvolva softwares para desktop com MiPhant",
-          link: "https://github.com/mugomes/miphant"
-        },
-        {
-          id: 2,
-          name: "MiPhantLibs",
-          category: "Bibliotecas",
-          description: "Mais de 30 funcionalidades para você trabalhar com MiPhant",
-          link: "https://github.com/mugomes/miphantlibs"
-        },
-        {
-          id: 3,
-          name: "MiAntivirus",
-          category: "Utilitários",
-          description: "Verifique seu computador em busca de virus.",
-          link: "https://github.com/mugomes/miantivirus"
-        },
-        {
-          id: 4,
-          name: "MiCheckHash",
-          category: "Utilitários",
-          description: "Verifique e gere hash de arquivos.",
-          link: "https://github.com/mugomes/micheckhash"
-        },
-        {
-          id: 5,
-          name: "MiConvertImage",
-          category: "Utilitários",
-          description: "Converta imagens em webp, jpg e png.",
-          link: "https://github.com/mugomes/miconvertimage"
-        },
-        {
-          id: 6,
-          name: "MiRemovePendrive",
-          category: "Utilitários",
-          description: "Obtenha informações de espaço e remova pendrive com segurança.",
-          link: "https://github.com/mugomes/miremovependrive"
-        },
-        {
-          id: 7,
-          name: "MiCheckExif",
-          category: "Utilitários",
-          description: "Visualize e remova dados exif de imagens.",
-          link: "https://github.com/mugomes/micheckexif"
-        },
-        {
-          id: 8,
-          name: "MiPhantTPL",
-          category: "Bibliotecas",
-          description: "Gere HTML de forma dinâmica com PHP.",
-          link: "https://github.com/mugomes/miphanttpl"
-        },
-        {
-          id: 9,
-          name: "MiPhantDB",
-          category: "Bibliotecas",
-          description: "Crie tabelas e consulte, adicione, altere e remova registros de banco de dados MariaDB.",
-          link: "https://github.com/mugomes/miphantdb"
-        },
-        {
-          id: 10,
-          name: "MiPhantRoute",
-          category: "Bibliotecas",
-          description: "Trabalhe com rotas de uma forma rápida e fácil.",
-          link: "https://github.com/mugomes/miphantroute"
-        },
-        {
-          id: 11,
-          name: "MiNJSInstall",
-          category: "Desenvolvimento",
-          description: "Instala e Desinstala o NVM e Node com mais facilidade no Linux Debian/Ubuntu.",
-          link: "https://github.com/mugomes/minjsinstall"
-        },
-        {
-          id: 12,
-          name: "MiGitTool",
-          category: "Desenvolvimento",
-          description: "Software para importar repositório do GitHub, ideal para quem usa chave GPG ou SSH.",
-          link: "https://github.com/mugomes/migittool"
-        },
-        {
-          id: 13,
-          name: "MiRecibo",
-          category: "Empresarial",
-          description: "Gerencie recibos para pagamentos com valor por extenso e calculo automático.",
-          link: "https://github.com/mugomes/mirecibo"
-        },
-        {
-          id: 14,
-          name: "MiSSL",
-          category: "Desenvolvimento",
-          description: "Crie certificados SSL para servidor Apache para testes de scripts em ambiente local no Debian/Ubuntu.",
-          link: "https://github.com/mugomes/missl"
-        },
-        {
-          id: 15,
-          name: "MiNota",
-          category: "Utilitários",
-          description: "Editor de Texto em formato HTML.",
-          link: "https://github.com/mugomes/minota"
-        },
-        {
-          id: 16,
-          name: "MiProtocolo",
-          category: "Empresarial",
-          description: "Crie protocolos para envio e recebimento de documentos. Gere relatórios para impressão e PDF.",
-          link: "https://github.com/mugomes/miprotocolo"
-        },
-        {
-          id: 17,
-          name: "MiTranslate",
-          category: "Utilitários",
-          description: "Software para tradução de textos.",
-          link: "https://github.com/mugomes/mitranslate"
-        },
-        {
-          id: 18,
-          name: "MiKeyGenerator",
-          category: "Desenvolvimento",
-          description: "Software para gerar chave de ativação com hash.",
-          link: "https://github.com/mugomes/mikeygenerator"
-        },
-        {
-          id: 19,
-          name: "MiAutoStart",
-          category: "Utilitários",
-          description: "Software para adicionar aplicativos para inicializar com o sistema no modo usuário.",
-          link: "https://github.com/mugomes/miautostart"
-        },
-        {
-          id: 20,
-          name: "MiPhantDBLite",
-          category: "Bibliotecas",
-          description: "MiPhantDBLite facilita a criação de tabelas e permite consultar, adicionar, alterar e excluir registros da tabela no SQLite3.",
-          link: "https://github.com/mugomes/miphantdblite"
-        },
-        {
-          id: 21,
-          name: "MGTOON",
-          category: "Bibliotecas",
-          description: "MGTOON é uma biblioteca para trabalhar com Token-Oriented Object Notation no PHP.",
-          link: "https://github.com/mugomes/mgtoon"
-        },
-        {
-          id: 22,
-          name: "MGColumnView",
-          category: "Bibliotecas",
-          description: "MGColumnView é um componente customizado para Fyne que exibe dados em formato de tabela, com suporte a cabeçalhos clicáveis, seleção por checkboxes, adição e remoção dinâmica de linhas e ordenação por coluna.",
-          link: "https://github.com/mugomes/mgcolumnview"
-        },
-        {
-          id: 23,
-          name: "MGDialogBox",
-          category: "Bibliotecas",
-          description: "MGDialogBox é um componente sofisticado para Fyne que possui diversos tipos de caixa de dialogo diferentes.",
-          link: "https://github.com/mugomes/mgdialogbox"
-        },
-        {
-          id: 24,
-          name: "MGNumericEntry",
-          category: "Bibliotecas",
-          description: "MGNumericEntry é um componente numérico para Fyne.",
-          link: "https://github.com/mugomes/mgnumericentry"
-        }
-      ],
+      currentPage: 1,
+      itemsPerPage: 6,
+
+      categories: ["Todos", "Softwares", "Scripts", "Plugins", "Templates"],
+
+      items: [
+        // {
+        //   id: 1,
+        //   name: "Produtos",
+        //   category: "Softwares",
+        //   description: "Gerador profissional de recibos com PDF, assinatura digital e backup.",
+        //   price: 59.90,
+        //   link: "#"
+        // }
+      ]
     };
   },
+
   computed: {
-    filteredSoftwares() {
-      const searchQueryLower = this.searchQuery.toLowerCase();
-      return this.softwares.filter(software => {
-        const matchesSearch = software.name.toLowerCase().includes(searchQueryLower);
-        const matchesCategory = this.selectedCategory === "Todos" || software.category === this.selectedCategory;
-        return matchesSearch && matchesCategory;
+    filteredItems() {
+      const search = this.searchQuery.toLowerCase();
+
+      return this.items.filter(item => {
+        const matchSearch =
+          item.name.toLowerCase().includes(search) ||
+          item.description.toLowerCase().includes(search);
+
+        const matchCategory =
+          this.selectedCategory === "Todos" ||
+          item.category === this.selectedCategory;
+
+        return matchSearch && matchCategory;
       });
     },
-  },
-  methods: {
-    filterByCategory(category) {
-      this.selectedCategory = category;
+
+    totalPages() {
+      return Math.ceil(this.filteredItems.length / this.itemsPerPage);
     },
+
+    paginatedItems() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      return this.filteredItems.slice(start, start + this.itemsPerPage);
+    }
   },
+
+  methods: {
+    changePage(page) {
+      this.currentPage = page;
+    },
+    nextPage() {
+      if (this.currentPage < this.totalPages) this.currentPage++;
+    },
+    previousPage() {
+      if (this.currentPage > 1) this.currentPage--;
+    }
+  }
 };
 </script>
 
 <style scoped>
 .card {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .card-body {
-  padding: 15px;
-}
-
-.categories {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 </style>

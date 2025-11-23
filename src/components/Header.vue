@@ -11,10 +11,13 @@
             <a class="nav-link" href="/#about">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#skills">Habilidades</a>
+            <a class="nav-link" href="/catalogo.html">Loja Virtual</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/catalogo.html">Projetos</a>
+            <a class="nav-link" href="/servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projetos.html">Projetos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/#contact">Contato</a>
