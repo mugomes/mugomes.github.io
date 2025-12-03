@@ -13,6 +13,7 @@
           </div>
         </div>
       </div>
+      <center><iframe src="/phpclasses-award.html" style="height: 300px;"></iframe></center>
     </div>
   </section>
 </template>
