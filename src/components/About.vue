@@ -22,7 +22,7 @@
 
         <p class="text-lg text-gray-600 leading-relaxed mt-7">
           Meu objetivo é transformar ideias em sistemas eficientes e confiáveis, alinhando tecnologia, design e
-          engenharia para entregar resultados reais. Busco sempre otimizar processos, automatizar tarefas e melhorar a
+          engenharia para entregar resultados. Busco sempre otimizar processos, automatizar tarefas e melhorar a
           performance das aplicações, garantindo que cada projeto impacte positivamente negócios e usuários.
         </p>
 
