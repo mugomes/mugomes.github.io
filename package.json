@@ -13,14 +13,17 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "bootstrap": "^5.3.8",
+    "@tailwindcss/cli": "^4.1.18",
     "bootstrap-icons": "^1.13.1",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.23",
     "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "vite": "^7.1.11",
     "vite-plugin-vue-devtools": "^8.0.3"
   }

@@ -1,15 +1,6 @@
 <template>
-  <footer class="bg-dark text-white text-center py-4">
-    <p>Copyright &copy; 2004-2026 Mu Gomes | Todos os direitos reservados.</p>
-    <ul class="list-unstyled">
-      <li>
-        <a href="https://youtube.com/@mugomesoficial" target="_blank" rel="noopener" class="text-white">YouTube</a> |
-        <a href="https://twitch.tv/profmu" target="_blank" rel="noopener" class="text-white">Twitch</a> |
-        <a href="https://github.com/mugomes" target="_blank" rel="noopener" class="text-white">GitHub</a> |
-        <a href="https://linkedin.com/in/mugomes" target="_blank" rel="noopener" class="text-white">LinkedIn</a> |
-        <a href="https://instagram.com/mugomesoficial" target="_blank" rel="noopener" class="text-white">Instagram</a>
-      </li>
-    </ul>
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>© 2004-2026 Murilo Gomes. Todos os direitos reservados.</p>
   </footer>
 </template>
 
@@ -20,7 +11,5 @@ export default {
 </script>
 
 <style scoped>
-footer a {
-  text-decoration: none;
-}
+
 </style>

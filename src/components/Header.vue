@@ -1,35 +1,49 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">Murilo Gomes</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <header class="fixed w-full bg-white shadow z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+
+      <h1 class="text-xl font-bold"><a href="/">Murilo Gomes</a></h1>
+
+      <!-- Botão hamburguer: SOMENTE mobile -->
+      <button
+        class="md:hidden text-2xl"
+        @click="open = !open"
+        aria-label="Menu"
+      >
+        ☰
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/#about">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projetos.html">Projetos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/#contact">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+      <!-- Menu DESKTOP -->
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="/#sobre">Sobre</a></li>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#portfolio">Portfólio</a></li>
+        <li><a href="/#contato">Contato</a></li>
+      </ul>
+
+    </nav>
+
+    <!-- Menu MOBILE -->
+    <ul
+      v-if="open"
+      class="md:hidden bg-white shadow px-6 py-4 space-y-4"
+    >
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+  </header>
 </template>
 
 <script>
 export default {
-  name: 'Header'
+  data() {
+    return {
+      open: false
+    }
+  }
 }
 </script>
-
-<style scoped>
-.navbar {
-  margin-bottom: 30px;
-}
-</style>
